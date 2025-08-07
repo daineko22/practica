@@ -3,23 +3,35 @@
   margin: 0;
   padding: 0;
   }
+   .wrapper {
+    background-image: url("основной фон.png");
+  }
 
   body {
     font-family: "Josefin Sans", sans-serif;
-    font-weight: 400;
+
   }
   
   a {
     text-decoration: none;
+    font-weight: 600;
   }
 
-  img {
-    max-width: 100%;
+  img.center {
+    display: block;
+    margin: 0 auto;
+    width: 167px;
+    height: 28px;
+    background: white;
+  padding: 17px 50px;
+  border-radius: 5px;
+
   }
-  .wrapper {
-    background-image: url("основной фон.png");
-    width: 100%;
+
+  li.active {
+    text-decoration: underline;
   }
+
 .container {
   width: 1440px;
   margin: 0 auto;
@@ -27,17 +39,32 @@
 header {
   width: 100%;
   padding: 50px 0;
+  padding-left: 136px;
+  padding-right: 136px;
 }
-header .logo img {
-  width: 167px;
-  height: auto;
-}
+
 header nav {
   float: center;
-  width: 50%;
+  width: 80%;
 }
-header ul {
+header nav ul {
   list-style: none;
   display: flex;
   justify-content: space-between;
+}
+header nav ul li {
+  display: inline-block;
+}
+header nav ul li:not(.active) a {
+  color: black;
+}
+header nav ul li.btn a {
+  background: #5956E9;
+  padding: 15px 10px;
+  border-radius: 5px;
+}
+header nav ul {
+  background: white;
+  padding: 17px 40px;
+  border-radius: 5px;
 }
